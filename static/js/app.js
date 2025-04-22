@@ -7,11 +7,23 @@ function renderPost(post) {
     document.getElementById("feed").appendChild(template);
 }
 
-function submitPost() {
+async function submitPost() {
     const message = document.getElementById("postInput").value;
-    console.log("Would post:", message);
-    alert("Tweet submitted (not really yet)");
-}
+    try{
+        const response = await fetch("/api/add_posts",{
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json",
+        }, 
+        body:JSON.stringify({
+            username,
+            message,
+        }),
+    });
+
+    } catch (error) {
+        console.log("😭 Post failed", error)
+    }
 
 window.onload = async () => {
     try {
@@ -19,6 +31,7 @@ window.onload = async () => {
         const posts = await response.json();
         posts.forEach((post) => renderPost(post));
     } catch (error){
-      console.error("Error fetching posts:", error)  
+      console.error("Error fetching posts:", error) 
     }
-};
+}}
+ 
