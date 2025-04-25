@@ -1,0 +1,37 @@
+/* style.css */
+
+#feed {
+    margin-top: 30px;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color:#ffcae2 ; /*background color tag*/
+    
+}
+
+p{ /*colors all the paragraph tags*/
+    color:#f998c4 ;
+    border: 5px double #f783b7;
+    background-color: white;
+    padding: 5px;
+}
+
+h1{/*colors all the h1 tags*/
+    color:#fd78b4 ;
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+
+h3{/*colors all the h1 tags*/
+    color:#ff5aa4 ;
+    font-family: "Sacramento", cursive;
+    font-weight: 400;
+    font-style: normal;
+    
+    
+}
